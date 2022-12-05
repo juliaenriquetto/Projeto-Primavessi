@@ -148,7 +148,7 @@ h1{
 
 
 footer{
-    background-image: url("imagens/rodapé.png");
+    background-image: url("imagens/fotterFinal.png");
     color: var(--verdeClaro);
     font-size: 1px;
     font-family: var(--fonte-destaque);
@@ -156,4 +156,5 @@ footer{
     text-align: center;
     margin-top: 20px;
     height: 600px;
+    width: 1582px;
 }

@@ -30,6 +30,10 @@ header{
     min-height: 100vh;
 }
 
+.carrossel{
+    overflow: hidden;
+}
+
 article{
     background-color: black;
     margin: 100px solid var(--verdeEscuro);
@@ -46,15 +50,15 @@ article{
 }
 
 #teste{
-    height: 600px;
-    width: 1200px;
-    margin-bottom: 10px;
-    margin-top: 100px;
+    height: 900px;
+    width: 1250px;
+    margin-bottom: 60px;
+    margin-top: 10px;
 }
 
 img{
     object-fit: cover;
-    width: 1600px;
+    width: 1650px;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
@@ -72,7 +76,7 @@ h1{
 
 
 footer{
-    background-image: url("imagens/rodapé.png");
+    background-image: url("imagens/fotterFinal.png");
     color: var(--verdeClaro);
     font-size: 1px;
     font-family: var(--fonte-destaque);
@@ -80,4 +84,5 @@ footer{
     text-align: center;
     margin-top: 20px;
     height: 600px;
+    width: 1582px;
 }

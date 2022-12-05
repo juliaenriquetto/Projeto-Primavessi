@@ -3,6 +3,7 @@ const app = express();
 var bodyParser = require('body-parser')
 var cookieParser = require('cookie-parser')
 var path = require('path')
+var Usuario = require('./src/models/users')
 
 app.use(cookieParser())
 
@@ -12,6 +13,33 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.set("view engine","ejs") 
 
 app.use(express.static(path.join(__dirname,"public")))
+
+app.get('/', function(req,res){
+ res.render('../src/views/cadastro.ejs', {})
+})
+
+app.get('/add', function(req,res){
+    res.render('../src/views/adiciona.ejs')
+})
+
+app.post('/add', function(req,res){
+  var usuario = new Usuario({
+    nome: req.body.txtNome,
+    telefone: req.body.txtTelefone,
+    cpf: req.body.txtCpf,
+    email: req.body.txtEmail,
+    senha: req.body.txtSenha
+  })
+  usuario.save(function(err){
+    if(err){
+      console.log(err)
+    }
+    else{
+       res.redirect('/')
+    }
+  })
+})
+   
 
 app.listen(8080, () => {
     console.log('API funcionando!');

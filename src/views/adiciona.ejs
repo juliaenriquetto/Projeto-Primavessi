@@ -17,25 +17,25 @@
             </section>
         </section>
 
-        <form action="" class="form_contact">
+        <form action="" class="form_contact" method="post">
             <h2>Se cadastre aqui</h2>
             <div class="user_info">
                 <label for="names">Nome:</label>
-                <input type="text" id="names">
-
-                <label for="names">Senha:</label>
-                <input type="text" id="names">
+                <input type="text" id="names" name="txtNome">
 
                 <label for="phone">Telefone / Celular:</label>
-                <input type="text" id="phone">
+                <input type="text" id="phone" name="txtTelefone">
 
                 <label for="phone">CPF:</label>
-                <input type="text" id="phone">
+                <input type="text" id="phone" name="txtCpf">
 
                 <label for="email">Email:</label>
-                <input type="text" id="email">
+                <input type="text" id="email" name="txtEmail">
 
-                <a href="cadastroFeito.html"> <input type="button" value="Cadastre-se" id="btnSend"> </a> 
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="txtSenha">
+
+                <a href="index.html"> <input type="submit" value="Cadastre-se" id="btnSend"> </a> 
             </div>
         </form>
 
