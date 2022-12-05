@@ -18,6 +18,7 @@ app.get('/', function(req,res){
  res.render('../src/views/cadastro.ejs', {})
 })
 
+
 app.get('/add', function(req,res){
     res.render('../src/views/adiciona.ejs')
 })

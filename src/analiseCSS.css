@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
+
+:root{
+    --verdeClaro: #618421;
+    --bege: #e9e2b6 ;
+    --preto: #000000;
+    --verdeEscuro: #2f3629 ;
+
+    --fonte-padrao: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    --fonte-destaque: 'Libre Franklin', sans-serif;
+}
+
+body{
+    background-image: url("imagens/PRIMAVESSI-fundo.png");
+    font-family: 'Open sans';
+}
+
+h1{
+    text-align: center;
+    font-size: 3em;
+    color: #2f3629;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    margin-top: 300px;
+}
+
+p{
+    text-align: center;
+    font-size: 1em;
+    font-family: var(--fonte-padrao);
+}
+
+a{
+    text-align: center;
+    font-size: 1em;
+    color: #2f3629;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    margin-top: 300px;
+    display: inline;
+    margin-left: 650px;
+}
