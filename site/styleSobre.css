@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
+
+:root{
+    --verdeClaro: #618421;
+    --bege: #e5e0c0 ;
+    --preto: #000000;
+    --verdeEscuro: #2f3629 ;
+
+    --fonte-padrao: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    --fonte-destaque: 'Libre Franklin', sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--verdeEscuro);
+    font-family: var(--fonte-padrao);
+    font-size: 1em;
+    justify-content: center;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+article{
+    background-color: black;
+    margin: 100px solid var(--verdeEscuro);
+    height: 1000px;
+    width: 1400px;
+    padding: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    margin-top: -500px;
+    border-radius: 50px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+#teste{
+    height: 600px;
+    width: 1200px;
+    margin-bottom: 10px;
+    margin-top: 100px;
+}
+
+img{
+    object-fit: cover;
+    width: 1600px;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+h1{
+    margin: 50px;
+    font-size: 5em;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    color: var(--bege);
+    font-weight: 300;
+}
+
+
+footer{
+    background-image: url("imagens/rodapé.png");
+    color: var(--verdeClaro);
+    font-size: 1px;
+    font-family: var(--fonte-destaque);
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    height: 600px;
+}

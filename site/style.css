@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
+
+:root{
+    --verdeClaro: #618421;
+    --bege: #e5e0c0 ;
+    --preto: #000000;
+    --verdeEscuro: #2f3629 ;
+
+    --fonte-padrao: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    --fonte-destaque: 'Libre Franklin', sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bege);
+    font-family: var(--fonte-padrao);
+    font-size: 1em;
+    justify-content: center;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.carrossel{
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+img{
+    object-fit: cover;
+    width: 1600px;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+nav{
+    background-color: var(--verdeEscuro);
+    padding: 10px;
+    color: var(--bege);
+    text-align: center;
+    justify-items: center;
+    width: 1365px;
+    margin-top: -590px;
+    margin-right: 90px;
+    margin-left: 105px;
+    margin-bottom: 50px;
+}
+
+nav > p{
+    font-family: var(--fonte-destaque);
+    font-size: 1.2em;
+    display: inline;
+    padding: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--bege);
+}
+
+#brinde{
+    margin-top: 100px;
+    overflow-x: hidden;
+    margin-top: 10px;
+}
+
+#monst{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.monstruario{
+    width: 350px;
+    height: 350px;
+    border: 8px solid #2f3629;
+    margin: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;   
+}
+
+#part1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.exib{
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;   
+}
+
+h1{
+    margin: 50px;
+    font-size: 5em;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    color: var(--bege);
+    font-weight: 300;
+}
+
+#emAlta{
+    margin-top: 100px;
+    background-image: linear-gradient(#2f3629, #e5e0c0);
+}
+
+#fila1{
+    margin-top: -200px;
+}
+
+#fila2{
+    margin-top: 350px;
+}
+
+.nomeRoupa{
+    font-size: 1.2em;
+    font-family: var(--fonte-padrao);
+    display: inline-block;
+    margin-left: 170px;
+    margin-right: 140px;
+    margin-top:   30px;
+    text-align: center;
+    color: var(--bege);
+}
+
+.precoRoupa{
+    font-size: 1.2em;
+    font-family: var(--fonte-padrao);
+    display: inline-block;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top:   10px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: var(--bege);
+}
+
+.imgEX{
+    width: 350px;
+    height: 350px;
+    border: 12px solid black;
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-top: -300px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.imgEA{
+    width: 350px;
+    height: 350px;
+    border: 12px solid #2f3629;
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer{
+    background-image: url("imagens/rodapé.png");
+    color: var(--verdeClaro);
+    font-size: 1px;
+    font-family: var(--fonte-destaque);
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    height: 600px;
+}
