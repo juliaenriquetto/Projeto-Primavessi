@@ -1,107 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="vendasCSS.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="vendasCSS.css" />
     <title>Primavessi - Vendas</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="carrossel">
-            <div class="container" id="img">
-                <img src="imagens/BANNER3.png" alt="sobre nós">  
-            </div>
+      <div class="carrossel">
+        <div class="container" id="img">
+          <img src="../public/images/BANNER3.png" alt="sobre nós" />
         </div>
+      </div>
     </header>
 
-    <div class='container'>
-        <div class='card'>
-          <h1> Cadastrar Roupas</h1>
-          
-          <div id='msgError'></div>
-          <div id='msgSuccess'></div>
-          
-                  <div class="label-float">
-                     <input type="text" id="nome" placeholder=" " required>
-                     <label id="labelNome" for="nome">Nome: </label>
-                  </div>
+    <div class="container">
+      <div class="card">
+        <h1>Cadastrar Roupas</h1>
 
-                  <div class="label-float">
-                    <input type="text" id="nome" placeholder=" " required>
-                    <label id="labelNome" for="nome">Email: </label>
-                 </div>
+        <div id="msgError"></div>
+        <div id="msgSuccess"></div>
 
-                  <div class="label-float">
-                     <input type="password" id="senha" placeholder=" " required>
-                     <label id="labelSenha" for="senha">Senha: </label>
-                     <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>          
-                  </div>
-      
-                  <div class="label-float">
-                    <input type="password" id="senha" placeholder=" " required>
-                    <label id="labelSenha" for="senha">CPF: </label>
-                    <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>          
-                 </div>
-
-                 <div class="label-float">
-                    <input type="password" id="senha" placeholder=" " required>
-                    <label id="labelSenha" for="senha">Telefone: </label>
-                    <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>          
-                 </div>
-
-                 <div class="label-float">
-                    <input type="text" id="nome" placeholder=" " required>
-                    <label id="labelNome" for="nome">Endereço: </label>
-                 </div>
-
-                 <label class="picture" for="picture__input" tabIndex="0">
-                    <span class="picture__image"></span>
-                  </label>
-                  
-                  <input type="file" name="picture__input" id="picture__input">
-                  
-                  <div class='justify-center'>
-                    <a href="emAnalise.html" target="_blank" rel="external"> <button onclick='cadastrar()'>Enviar para análise</button> </a> 
-                  </div>
-      
-          
-                  <script>
-                    const inputFile = document.querySelector("#picture__input");
-                    const pictureImage = document.querySelector(".picture__image");
-                    const pictureImageTxt = "Choose an image";
-                    pictureImage.innerHTML = pictureImageTxt;
-
-                    inputFile.addEventListener("change", function (e) {
-                    const inputTarget = e.target;
-                    const file = inputTarget.files[0];
-
-                    if (file) {
-                        const reader = new FileReader();
-
-                        reader.addEventListener("load", function (e) {
-                        const readerTarget = e.target;
-
-                        const img = document.createElement("img");
-                        img.src = readerTarget.result;
-                        img.classList.add("picture__img");
-
-                        pictureImage.innerHTML = "";
-                        pictureImage.appendChild(img);
-                        });
-
-                        reader.readAsDataURL(file);
-                    } else {
-                        pictureImage.innerHTML = pictureImageTxt;
-                    }
-                    });
-                  </script>
+        <div class="label-float">
+          <input type="text" id="nome" placeholder=" " required />
+          <label id="labelNome" for="nome">Nome: </label>
         </div>
+
+        <div class="label-float">
+          <input type="text" id="nome" placeholder=" " required />
+          <label id="labelNome" for="nome">Email: </label>
         </div>
+
+        <div class="label-float">
+          <input type="password" id="senha" placeholder=" " required />
+          <label id="labelSenha" for="senha">Senha: </label>
+          <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+        </div>
+
+        <div class="label-float">
+          <input type="password" id="senha" placeholder=" " required />
+          <label id="labelSenha" for="senha">CPF: </label>
+          <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+        </div>
+
+        <div class="label-float">
+          <input type="password" id="senha" placeholder=" " required />
+          <label id="labelSenha" for="senha">Telefone: </label>
+          <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+        </div>
+
+        <div class="label-float">
+          <input type="text" id="nome" placeholder=" " required />
+          <label id="labelNome" for="nome">Endereço: </label>
+        </div>
+
+        <label class="picture" for="picture__input" tabindex="0">
+          <span class="picture__image"></span>
+        </label>
+
+        <input type="file" name="picture__input" id="picture__input" />
+
+        <div class="justify-center">
+          <a href="emAnalise.html" target="_blank" rel="external">
+            <button onclick="cadastrar()">Enviar para análise</button>
+          </a>
+        </div>
+
+        <script>
+          const inputFile = document.querySelector("#picture__input");
+          const pictureImage = document.querySelector(".picture__image");
+          const pictureImageTxt = "Choose an image";
+          pictureImage.innerHTML = pictureImageTxt;
+
+          inputFile.addEventListener("change", function (e) {
+            const inputTarget = e.target;
+            const file = inputTarget.files[0];
+
+            if (file) {
+              const reader = new FileReader();
+
+              reader.addEventListener("load", function (e) {
+                const readerTarget = e.target;
+
+                const img = document.createElement("img");
+                img.src = readerTarget.result;
+                img.classList.add("picture__img");
+
+                pictureImage.innerHTML = "";
+                pictureImage.appendChild(img);
+              });
+
+              reader.readAsDataURL(file);
+            } else {
+              pictureImage.innerHTML = pictureImageTxt;
+            }
+          });
+        </script>
+      </div>
+    </div>
 
     <footer>
-        <p>Criadoras: Clara | Laura | Júlia</p>
+      <p>Criadoras: Clara | Laura | Júlia</p>
     </footer>
-</body>
+  </body>
 </html>

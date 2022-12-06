@@ -1,47 +1,53 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-var bodyParser = require('body-parser')
-var cookieParser = require('cookie-parser')
-var path = require('path')
-var Usuario = require('./src/models/users')
+var bodyParser = require("body-parser");
+var cookieParser = require("cookie-parser");
+var path = require("path");
+var Usuario = require("./src/models/users");
 
-app.use(cookieParser())
+app.use(cookieParser());
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.set("view engine","ejs") 
+app.set("view engine", "ejs");
 
-app.use(express.static(path.join(__dirname,"public")))
+app.use(express.static("public"));
+app.use("/css", express.static("./public/css"));
+app.use("/images", express.static("./public/images"));
 
-app.get('/', function(req,res){
- res.render('../src/views/cadastro.ejs', {})
-})
+app.get("/", function (req, res) {
+  res.render(".../site/index.html", {});
+});
+//mudar aq em cima ^
 
+//------------------------não mexe daqui pra baixo plmds louca
 
-app.get('/add', function(req,res){
-    res.render('../src/views/adiciona.ejs')
-})
+app.get("/cadastroFeito", function (req, res) {
+    res.render("../src/views/cadastroFeito.ejs", {});
+  });
 
-app.post('/add', function(req,res){
+app.get("/add", function (req, res) {
+  res.render("../src/views/adiciona.ejs");
+});
+
+app.post("/add", function (req, res) {
   var usuario = new Usuario({
     nome: req.body.txtNome,
     telefone: req.body.txtTelefone,
     cpf: req.body.txtCpf,
     email: req.body.txtEmail,
     senha: req.body.txtSenha
-  })
-  usuario.save(function(err){
-    if(err){
-      console.log(err)
+  });
+  usuario.save(function (err) {
+    if (err) {
+      console.log(err);
+    } else {
+      res.redirect("/cadastroFeito");
     }
-    else{
-       res.redirect('/')
-    }
-  })
-})
-   
+  });
+});
 
 app.listen(8080, () => {
-    console.log('API funcionando!');
-})
+  console.log("API funcionando!");
+});
