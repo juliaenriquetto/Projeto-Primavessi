@@ -35,15 +35,15 @@ header{
 }
 
 article{
-    background-color: black;
+    background-color: var(--verdeEscuro);
     margin: 100px solid var(--verdeEscuro);
     height: 1000px;
-    width: 1400px;
-    padding: 50px;
+    width: 1500px;
+    padding: 5px;
     font-family: 'Montserrat', sans-serif;
     font-size: 2em;
     margin-top: -500px;
-    border-radius: 50px;
+    border-radius: 25px;
     text-align: center;
     margin-left: auto;
     margin-right: auto; 
@@ -51,17 +51,14 @@ article{
 
 #teste{
     height: 900px;
-    width: 1250px;
+    width: 1350px;
     margin-bottom: 60px;
     margin-top: 10px;
 }
 
 img{
     object-fit: cover;
-    width: 1650px;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;
+    width: 1750px;
 }
 
 h1{

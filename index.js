@@ -4,6 +4,7 @@ var bodyParser = require("body-parser");
 var cookieParser = require("cookie-parser");
 var path = require("path");
 var Usuario = require("./src/models/users");
+const nodemailer = require('nodemailer')
 
 app.use(cookieParser());
 
@@ -42,6 +43,32 @@ app.post("/add", function (req, res) {
     if (err) {
       console.log(err);
     } else {
+      try {
+        const transporter = nodemailer.createTransport({
+          host: 'smtp.mailtrap.io',
+          port: Number(2525),
+          auth: {
+            user: '9f30be3bd2c40d',
+            pass: '06bdf9436a5e16',
+          },
+          ssl: false,
+          tls: true,
+        });
+  
+        transporter.sendMail({
+          to: {
+            name: usuario.nome,
+            address: usuario.email,
+          },
+          from: {
+            name: 'Primavessi',
+            address: 'contato@primavessi.com.br',
+          },
+          subject: 'Bem vindo à Primavessi!',
+          html: '<h1 style="color: #2f3629; text-align: center; font-size: 2em; background-color: #e5e0c0;">Você se cadastrou na Primavessi!</h1><p style="text-align: center; font-size: 2em;">Bem vindo, ' + usuario.nome + '!. <br> Parabéns você já está cadastrado em nossa loja.</p>',
+        });
+      } catch {}
+
       res.redirect("/cadastroFeito");
     }
   });
