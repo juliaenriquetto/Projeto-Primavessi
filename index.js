@@ -13,20 +13,19 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
 app.use(express.static("public"));
+app.use(express.static("site"));
 app.use("/css", express.static("./public/css"));
 app.use("/images", express.static("./public/images"));
 
 app.get("/", function (req, res) {
-  res.render(".../site/index.html", {});
+  res.render("site/index.html", {});
 });
-//mudar aq em cima ^
-
-//------------------------não mexe daqui pra baixo plmds louca
 
 app.get("/cadastroFeito", function (req, res) {
     res.render("../src/views/cadastroFeito.ejs", {});
   });
 
+  
 app.get("/add", function (req, res) {
   res.render("../src/views/adiciona.ejs");
 });
