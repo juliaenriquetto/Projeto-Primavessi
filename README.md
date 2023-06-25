@@ -25,4 +25,4 @@ ganho. A entrega será feita pelos correios, a partir da própria vendedora. O
 frete já será incluso na hora da compra.
 
 Com um design ecológico e moderno, prezando pelo meio ambiente,
-nós queremos contribuir contra os fatores poluentes da indústria atual.
+nós queremos contribuir contra os fatores poluentes da indústria atual
