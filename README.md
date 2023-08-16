@@ -5,6 +5,7 @@
 - Julia Enriquetto
 - Laura Nakamura
 
+
 ## Ideia Principal: 
 Nosso projeto será uma loja online, mais especificamente um brechó de
 roupas de luxo. Vendo como a indústria da moda é muito poluente,
